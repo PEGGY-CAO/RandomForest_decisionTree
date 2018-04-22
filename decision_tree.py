@@ -85,18 +85,18 @@ class DecisionTree(object):
 
     def classify(self, record):
         # TODO: classify the record using self.tree and return the predicted label
-        figureout = False
+
         initno = 0
         child = 0
         # while not figureout:
 
         for item in self.tree:
-            print '1if'
+            # print '1if'
             if item['No'] == initno:
-                print '2if', initno
+                # print '2if', initno
                 if item['right'] is None:
-                    print '3'
-                    figureout = True
+                    # print '3'
+
                     return item['leafbottom']
                 if isinstance(record[item['splitcol']], Number):
                     if record[item['splitcol']] <= item['splitval']:
@@ -108,7 +108,7 @@ class DecisionTree(object):
                         child = item['left']
                     else:
                         child = item['right']
-            print 'here'
+            # print 'here'
             initno = child
 
             # node = (each for each in ttt.tree if each['No'] == 0).next()
@@ -116,16 +116,16 @@ class DecisionTree(object):
 
 
 
-X = [[3, 'aa', 10], [1, 'bb', 22], [2, 'cc', 28], [5, 'bb', 32], [4, 'cc', 32]]
-
-y = [1, 1, 0, 0, 1]
-ttt = DecisionTree()
-ttt.learn(X, y)
-print(ttt.tree)
-# for item in ttt.tree:
-#     if item['leafbottom'] == 1:
-#         print(item)
-
-print (each for each in ttt.tree if each['leafbottom'] == 0).next()
-test = [2, 'cc', 28]
-print ttt.classify(test)
+# X = [[3, 'aa', 10], [1, 'bb', 22], [2, 'cc', 28], [5, 'bb', 32], [4, 'cc', 32]]
+#
+# y = [1, 1, 0, 0, 1]
+# ttt = DecisionTree()
+# ttt.learn(X, y)
+# print(ttt.tree)
+# # for item in ttt.tree:
+# #     if item['leafbottom'] == 1:
+# #         print(item)
+#
+# print (each for each in ttt.tree if each['leafbottom'] == 0).next()
+# test = [2, 'cc', 28]
+# print ttt.classify(test)
