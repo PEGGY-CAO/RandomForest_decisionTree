@@ -1,4 +1,4 @@
 # RandomForest_decisionTree
-Accuracy: 0.71. 
+Accuracy is around 0.75. The highest time is 0.76
 
 Implemented decisionTree and random forest model in machine learning with python, with approach of Information Gain
