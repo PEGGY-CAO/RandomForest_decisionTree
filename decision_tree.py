@@ -129,3 +129,4 @@ class DecisionTree(object):
 # print (each for each in ttt.tree if each['leafbottom'] == 0).next()
 # test = [2, 'cc', 28]
 # print ttt.classify(test)
+
